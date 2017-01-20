@@ -1,11 +1,16 @@
-var textInputChecker = /f/
 $(function() {
   $("form").submit(function(event) {
-    event.preventDefault();
     var userInput = $("input").val();
-    var numbers = counter(userInput);
-    writeToList(numbers);
+    if (textInputChecker.test(userInput)) {
+      event.preventDefault();
+      var numbers = counter(userInput);
+      writeToList(numbers);
+    } else {
+      alert("input is invalid")
+    }
   });
+  var textInputChecker = /^[0-9]+$/
+
   var counter = function(myNumber) {
     var pingPongArray = [];
     for (var i = 1; i <= myNumber; i++) {
@@ -21,7 +26,9 @@ $(function() {
     }
     return pingPongArray
   }
+
   var outputList = document.getElementById("output-list");
+
   var writeToList = function(myArray) {
     $(outputList).text("");
     for (var i = 0; i < myArray.length; i++) {
@@ -29,7 +36,5 @@ $(function() {
       createLiElement.innerHTML = myArray[i];
       outputList.appendChild(createLiElement);
     }
-
   }
-
 })

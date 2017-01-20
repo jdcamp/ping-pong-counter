@@ -1,1 +1,12 @@
-li {}
+#header {
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.ping-animation {
+  animation: 15px
+}
