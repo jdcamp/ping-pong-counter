@@ -32,9 +32,7 @@ $(function() {
   var writeToList = function(myArray) {
     $(outputList).text("");
     for (var i = 0; i < myArray.length; i++) {
-      var createLiElement = document.createElement("li");
-      createLiElement.innerHTML = myArray[i];
-      outputList.appendChild(createLiElement);
+      $(outputList).append("<li>" + myArray[i] + "</li>");
     }
   }
 })
