@@ -23,6 +23,7 @@
 
 * _Clone Repo_
 * _Open index.html_
+* _Or go to http://jdcamp.github.io/ping-pong-counter_
 
 
 ## Known Bugs
