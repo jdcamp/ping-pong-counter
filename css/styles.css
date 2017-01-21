@@ -7,6 +7,27 @@
   text-align: center;
 }
 
-.ping-animation {
-  animation: 15px
+.ping {
+  color: teal;
+  font-weight: 500;
+}
+
+.pong {
+  color: lightslategray;
+  font-weight: 600;
+}
+
+.ping-pong {
+  color: darkslateblue;
+  font-weight: 700;
+}
+
+#output-stream {
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+body {
+  background-image: url(https://subtlepatterns.com/patterns/fabric_of_squares_gray.png);
 }

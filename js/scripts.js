@@ -32,7 +32,15 @@ $(function() {
   var writeToList = function(myArray) {
     $(outputList).text("");
     for (var i = 0; i < myArray.length; i++) {
-      $(outputList).append("<li>" + myArray[i] + "</li>");
+      if (myArray[i] === "ping") {
+        $(outputList).append("<li class=\"ping\">" + myArray[i] + "</li>");
+      } else if (myArray[i] === "pong") {
+        $(outputList).append("<li class=\"pong\">" + myArray[i] + "</li>");
+      } else if (myArray[i] === "ping-pong") {
+        $(outputList).append("<li class=\"ping-pong\">" + myArray[i] + "</li>");
+      } else {
+        $(outputList).append("<li>" + myArray[i] + "</li>");
+      }
     }
   }
 })
